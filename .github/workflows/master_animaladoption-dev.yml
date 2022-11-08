@@ -25,7 +25,8 @@ jobs:
 #         run: dotnet build --configuration Release --no-restore
 
       - name: Publish portal project in Release mode
-        run: dotnet publish ${{ github.workspace }}/AnimalAdoption.Web.Portal/AnimalAdoption.Web.Portal.csproj --configuration Release --no-build --output ./taa-portal/
+#         run: dotnet publish ${{ github.workspace }}/AnimalAdoption.Web.Portal/AnimalAdoption.Web.Portal.csproj --configuration Release --no-build --output ./taa-portal/
+        run: dotnet publish ${{ github.workspace }}/AnimalAdoption.Web.Portal/AnimalAdoption.Web.Portal.csproj --configuration Release --output ./taa-portal/
 
       - name: Upload a Build Artifact for Web Portal
         uses: actions/upload-artifact@v2.1.3
